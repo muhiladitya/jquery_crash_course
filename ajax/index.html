@@ -44,7 +44,7 @@
 	<script>
 		$(document).ready(function(){
 			/*
-			$('#result').load('test.html', function(responseTxt, statusTxt, xhr){
+			$('#result').load('test.html', function(responseTxt, statusTxt, xhr){ // loading a file into a element
 				if(statusTxt == "success"){
 					alert('It went fine');
 				} else if(statusTxt == "error"){
@@ -54,15 +54,15 @@
 			*/
 
 			/*
-			$.get('test.html', function(data){
+			$.get('test.html', function(data){ // directly going to file and getting the data to data parameter in function then applying that data in any element
 				$('#result').html(data);
 			});
 			*/
 
 			/*
-			$.getJSON('users.json', function(data){
-				$.each(data, function(i, user){
-					$('ul#users').append('<li>'+user.firstName+'</li>');
+			$.getJSON('users.json', function(data){ // getting JSON data into data parameter
+				$.each(data, function(i, user){ // looping throught that data
+					$('ul#users').append('<li>'+user.firstName+'</li>'); // + is used liek @ in views c#
 				});
 			});
 			*/
@@ -74,7 +74,7 @@
 				dataType: 'json'
 			}).done(function(data){
 				console.log(data);
-				$.map(data, function(post, i){
+				$.map(data, function(post, i){ // map is similar to each
 					$('#result').append('<h3>'+post.title+'</h3><p>'+post.body+'</p>');
 				});
 			});

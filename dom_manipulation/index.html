@@ -59,7 +59,7 @@
 				//$('p.para2').toggleClass('myClass');
 			//});
 
-			/*
+			/* adding and changing the content within the dom
 			//$('#myDiv').text('Hello World');
 			//$('#myDiv').html('<h3>Hello World</h3>');
 			//alert($('#myDiv').text());
@@ -67,16 +67,16 @@
 			$('ul').prepend('<li>Prepend List Item</li>');
 			$('.para1').appendTo('.para2');
 			$('.para1').prependTo('.para2');
-			$('ul').before('<h4>Hello</h4>');
+			$('ul').before('<h4>Hello</h4>');// adds a new html element before the specified element on in it
 			$('ul').after('<h4>World</h4>');
-			$('ul').empty();
-			$('ul').detach();
+			$('ul').empty();// removes the inner items of the element
+			$('ul').detach();// removes from the dom
 			$('a').attr('target', '_blank');
 			alert($('a').attr('href'));
 			$('a').removeAttr('target');
 			*/
-			//$('p').wrap('<h1>');
-			//$('p').wrapAll('<h1>');
+			//$('p').wrap('<h1>'); // wrappping means making all the p element with h1 tag individually
+			//$('p').wrapAll('<h1>');// paras are wrapped in one h1
 
 			$('#newItem').keyup(function(e){
 				var code = e.which;
